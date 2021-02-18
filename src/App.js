@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import './App.css';
 import About from './components/About';
 import Nav from './components/Nav';
 import Gallery from './components/Gallery';
-import { set } from 'lodash';
 
 function App() {
   const [categories] = useState([
@@ -29,7 +27,7 @@ function App() {
       />
       <main>
         <div>
-          <Gallery />
+          <Gallery currentCategory={currentCategory} />
           <About />
         </div>
       </main>
